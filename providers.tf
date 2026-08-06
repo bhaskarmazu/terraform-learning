@@ -26,7 +26,7 @@ terraform {
     bucket         = "terraform-learning-state-048280526216"
     key            = "terraform-learning/terraform.tfstate"
     region         = "us-west-2"
-    dynamodb_table = "terraform-learning-locks"
+    use_lockfile   = true
     encrypt        = true
   }
 }
