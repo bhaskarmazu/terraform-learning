@@ -23,14 +23,14 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraform-learning-state-048280526216"
-    key            = "terraform-learning/terraform.tfstate"
-    region         = "us-west-2"
-    use_lockfile   = true
-    encrypt        = true
+    bucket       = "terraform-learning-state-048280526216"
+    key          = "terraform-learning/terraform.tfstate"
+    region       = "us-west-2"
+    use_lockfile = true
+    encrypt      = true
   }
 }
 
 provider "aws" {
   region = "us-west-2"
-}# trigger workflow test
+} # trigger workflow test
