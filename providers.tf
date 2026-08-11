@@ -26,7 +26,6 @@ terraform {
     bucket       = "terraform-learning-state-054119521068"
     key          = "terraform-learning/terraform.tfstate"
     region       = "us-east-2" #default region for the S3 bucket
-    profile = "bmlabs01"
     use_lockfile = true
     encrypt      = true
   }
@@ -34,5 +33,4 @@ terraform {
 
 provider "aws" {
   region = "us-east-2"
-  profile = "bmlabs01"
 }
