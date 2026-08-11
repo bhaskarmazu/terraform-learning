@@ -11,13 +11,13 @@ terraform {
     bucket       = "terraform-learning-state-054119521068"
     key          = "eks-learning/terraform.tfstate"
     region       = "us-east-2"
-    profile = "bmlabs01"
+    profile      = "bmlabs01"
     use_lockfile = true
     encrypt      = true
   }
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region  = "us-east-2"
   profile = "bmlabs01"
 }
