@@ -35,8 +35,8 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::048280526216:role/github-actions-terraform
-          aws-region: us-west-2
+          role-to-assume: arn:aws:iam::054119521068:role/github-actions-terraform
+          aws-region: us-east-2
 
       - name: Terraform fmt check
         run: terraform fmt -check -recursive

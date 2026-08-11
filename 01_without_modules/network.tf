@@ -9,7 +9,7 @@ resource "aws_vpc" "learning" {
 resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.learning.id
   cidr_block              = "10.0.1.0/24"
-  availability_zone       = "us-west-2a"
+  availability_zone       = "us-east-2a"
   map_public_ip_on_launch = true
 
   tags = { Name = "terraform-learning-public-subnet" }

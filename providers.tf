@@ -23,14 +23,14 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraform-learning-state-048280526216"
-    key            = "terraform-learning/terraform.tfstate"
-    region         = "us-west-2"
-    use_lockfile   = true
-    encrypt        = true
+    bucket       = "terraform-learning-state-054119521068"
+    key          = "terraform-learning/terraform.tfstate"
+    region       = "us-east-2" #default region for the S3 bucket
+    use_lockfile = true
+    encrypt      = true
   }
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-2"
 }

@@ -13,7 +13,7 @@ module "eks" {
   addons = {
     vpc-cni = {
       most_recent    = true
-      before_compute = true   # install CNI before the node group comes up
+      before_compute = true # install CNI before the node group comes up
     }
     kube-proxy = {
       most_recent = true
