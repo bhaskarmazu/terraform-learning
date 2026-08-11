@@ -10,5 +10,5 @@ variable "subnet_cidr" {
 
 variable "availability_zone" {
   type    = string
-  default = "us-west-2a"
+  default = "us-east-2a"
 }
