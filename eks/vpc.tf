@@ -5,7 +5,7 @@ module "vpc" {
   name = "eks-learning-vpc"
   cidr = "10.1.0.0/16"
 
-  azs                     = ["us-west-2a", "us-west-2b"]
+  azs                     = ["us-east-2a", "us-east-2b"]
   public_subnets          = ["10.1.1.0/24", "10.1.2.0/24"]
   map_public_ip_on_launch = true
 

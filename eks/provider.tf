@@ -8,14 +8,16 @@ terraform {
   }
 
   backend "s3" {
-    bucket       = "terraform-learning-state-048280526216"
+    bucket       = "terraform-learning-state-054119521068"
     key          = "eks-learning/terraform.tfstate"
-    region       = "us-west-2"
+    region       = "us-east-2"
+    profile = "bmlabs01"
     use_lockfile = true
     encrypt      = true
   }
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-2"
+  profile = "bmlabs01"
 }
