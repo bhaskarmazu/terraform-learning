@@ -26,12 +26,22 @@ module "eks" {
   eks_managed_node_groups = {
     default = {
       instance_types = ["t3.small"]
-      min_size       = 1
-      max_size       = 1
-      desired_size   = 1
+      min_size       = 2
+      max_size       = 2
+      desired_size   = 2
       subnet_ids     = module.vpc.public_subnets
     }
   }
 
+  node_security_group_additional_rules = {
+  ingress_self_all = {
+    description = "Node to node all ports/protocols"
+    protocol    = "-1"
+    from_port   = 0
+    to_port     = 0
+    type        = "ingress"
+    self        = true
+  }
+}
   enable_cluster_creator_admin_permissions = true
 }
