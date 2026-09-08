@@ -42,6 +42,28 @@ module "eks" {
       type        = "ingress"
       self        = true
     }
+    ingress_cluster_webhook = {
+      description                   = "Cluster API to node for Istio sidecar-injector webhook"
+      protocol                      = "tcp"
+      from_port                     = 15017
+      to_port                       = 15017
+      type                          = "ingress"
+      source_cluster_security_group = true
+  }
   }
   enable_cluster_creator_admin_permissions = true
+
+  access_entries = {
+    bm389828 = {
+      principal_arn = "arn:aws:iam::054119521068:user/bm389828"
+      policy_associations = {
+        admin = {
+          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+          access_scope = {
+            type = "cluster"
+          }
+        }
+      }
+    }
+  }
 }
