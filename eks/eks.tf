@@ -49,7 +49,7 @@ module "eks" {
       to_port                       = 15017
       type                          = "ingress"
       source_cluster_security_group = true
-  }
+    }
   }
   enable_cluster_creator_admin_permissions = true
 
